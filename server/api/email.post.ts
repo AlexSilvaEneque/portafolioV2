@@ -1,10 +1,17 @@
 import nodemailer from 'nodemailer'
 
+interface ICResponse {
+    msj: String
+    status: Boolean
+}
+
 export default defineEventHandler( async (event) => {
     const body = await readBody(event)
-    console.log(body);
     
-    let message = ''
+    let res : ICResponse = {
+        msj: '',
+        status: true
+    }
 
     const runtime = useRuntimeConfig()
 
@@ -24,17 +31,20 @@ export default defineEventHandler( async (event) => {
     try {
         await transporter.sendMail({
             ...mailOptions,
-            // subject: body.name,
             text: body.msj,
-            html: `<h1>${body.msj}</h1>`
+            html: `<h3>Quiere Contactarte: </h3>
+                <p>${body.name} - ${body.email}</p>
+                <h3>Asunto:</h3>
+                <p>${body.msj}</p>
+                `
         })
 
-        message = 'Envio exitoso'
+        res.msj = 'Envio exitoso!'
         
     } catch (error) {
-        message = 'Hubo un error'
-        console.log(error)
+        res.msj = 'Hubo un error'
+        res.status = false
     }
 
-    return message
+    return res
 } )

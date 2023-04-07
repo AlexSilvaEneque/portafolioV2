@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main>
+  <main class="bg-[#0C0C0D]">
     <NuxtPage />
   </main>
 </template>
@@ -19,6 +19,6 @@ body::-webkit-scrollbar-thumb {
   background: #4E5249;
 }
 .custom-height {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
 }
 </style>

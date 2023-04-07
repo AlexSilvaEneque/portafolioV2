@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <Navbar />
   <Social />
@@ -9,8 +5,5 @@
   <Skills />
   <Proyects />
   <Contact />
-  <ButtonTop />
+  <Footer />
 </template>
-
-<style>
-</style>

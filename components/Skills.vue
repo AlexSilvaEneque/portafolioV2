@@ -9,11 +9,11 @@
     <div id="skills" class="w-full min-h-screen bg-gradient-to-tr from-[#0C0C0D] to-[#131B22]">
         <div class="w-3/4 mx-auto py-9">
 
-            <h2 class="text-white text-2xl font-semibold">Skills</h2>
+            <h2 class="text-white text-2xl font-semibold text-center md:text-left">Conocimientos</h2>
 
             <div class="mt-7">
-                <h3 class="mb-4 text-white">Frontend</h3>
-                <div class="w-full flex flex-wrap gap-4">
+                <h3 class="mb-4 text-white text-center md:text-left">Frontend</h3>
+                <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
                     <div v-for="item in fronts"
                         class="w-36 shadow-sm bg-[#131B22]/70 rounded-md py-2">
                         <img :src="item.image" :alt="item.name"
@@ -26,8 +26,8 @@
             </div>
 
             <div class="mt-7">
-                <h3 class="mb-4 text-white">Backend</h3>
-                <div class="w-full flex flex-wrap gap-4">
+                <h3 class="mb-4 text-white text-center md:text-left">Backend</h3>
+                <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
                     <div v-for="item in back"
                         class="w-36 shadow-sm bg-[#131B22]/70 rounded-md py-2">
                         <img :src="item.image" :alt="item.name"
@@ -40,8 +40,8 @@
             </div>
 
             <div class="mt-7">
-                <h3 class="mb-4 text-white">Database</h3>
-                <div class="w-full flex flex-wrap gap-4">
+                <h3 class="mb-4 text-white text-center md:text-left">Database</h3>
+                <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
                     <div v-for="item in dbs"
                         class="w-36 shadow-sm bg-[#131B22]/70 rounded-md py-2">
                         <img :src="item.image" :alt="item.name"
@@ -54,8 +54,8 @@
             </div>
 
             <div class="mt-7">
-                <h3 class="mb-4 text-white">Others</h3>
-                <div class="w-full flex flex-wrap gap-4">
+                <h3 class="mb-4 text-white text-center md:text-left">Others</h3>
+                <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
                     <div v-for="item in tools"
                         class="w-36 shadow-sm bg-[#131B22]/70 rounded-md py-2">
                         <img :src="item.image" :alt="item.name"
@@ -69,8 +69,3 @@
         </div>
     </div>
 </template>
-
-
-<style scoped>
-
-</style>
