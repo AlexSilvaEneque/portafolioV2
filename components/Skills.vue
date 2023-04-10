@@ -1,8 +1,5 @@
 <script setup lang="ts">
-    const { data : fronts } = await useFetch('/api/front')
-    const { data : back } = await useFetch('/api/back')
-    const { data : dbs } = await useFetch('/api/dbs')
-    const { data : tools } = await useFetch('/api/tools')
+    import { front, back, db, tools } from '~/server/utils/abilities'
 </script>
 
 <template>
@@ -11,61 +8,14 @@
 
             <h2 class="text-white text-2xl font-semibold text-center md:text-left">Conocimientos</h2>
 
-            <div class="mt-7">
-                <h3 class="mb-4 text-white text-center md:text-left">Frontend</h3>
-                <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
-                    <div v-for="item in fronts"
-                        class="w-36 shadow-sm bg-[#131B22]/70 rounded-md py-2">
-                        <img :src="item.image" :alt="item.name"
-                            class="w-14 aspect-[3/2] object-contain mx-auto">
-                        <p class="text-center text-white/80 mt-2 font-semibold text-sm">
-                            {{ item.name }}
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <LazyUiCard title="Frontend" :skill="front" />
 
-            <div class="mt-7">
-                <h3 class="mb-4 text-white text-center md:text-left">Backend</h3>
-                <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
-                    <div v-for="item in back"
-                        class="w-36 shadow-sm bg-[#131B22]/70 rounded-md py-2">
-                        <img :src="item.image" :alt="item.name"
-                            class="w-14 aspect-[3/2] object-contain mx-auto">
-                        <p class="text-center text-white/80 mt-2 font-semibold text-sm">
-                            {{ item.name }}
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <LazyUiCard title="Backend" :skill="back" />            
 
-            <div class="mt-7">
-                <h3 class="mb-4 text-white text-center md:text-left">Database</h3>
-                <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
-                    <div v-for="item in dbs"
-                        class="w-36 shadow-sm bg-[#131B22]/70 rounded-md py-2">
-                        <img :src="item.image" :alt="item.name"
-                            class="w-14 aspect-[3/2] object-contain mx-auto">
-                        <p class="text-center text-white/80 mt-2 font-semibold text-sm">
-                            {{ item.name }}
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <LazyUiCard title="Database" :skill="db" />
 
-            <div class="mt-7">
-                <h3 class="mb-4 text-white text-center md:text-left">Others</h3>
-                <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
-                    <div v-for="item in tools"
-                        class="w-36 shadow-sm bg-[#131B22]/70 rounded-md py-2">
-                        <img :src="item.image" :alt="item.name"
-                            class="w-14 aspect-[3/2] object-contain mx-auto">
-                        <p class="text-center text-white/80 mt-2 font-semibold text-sm">
-                            {{ item.name }}
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <LazyUiCard title="Others" :skill="tools" />
+
         </div>
     </div>
 </template>

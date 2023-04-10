@@ -10,6 +10,9 @@ export default defineNuxtConfig({
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
             title: 'AMSE Dev',
+            htmlAttrs: {
+                lang: 'es'
+            },
             meta: [
                 {
                     name: 'description',

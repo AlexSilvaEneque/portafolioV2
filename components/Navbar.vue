@@ -33,7 +33,8 @@
             <div class="flex h-full items-center w-11/12 md:w-3/4 mx-auto justify-between font-bold">
                 <div class="flex justify-start">
                     <a href="#">
-                        <img src="~/assets/img/logo.png" class="h-32" alt="Logo">
+                        <img src="~/assets/img/logo.png" class="w-full h-32" alt="Logo"
+                            loading="lazy">
                     </a>
                 </div>
                 <div v-for="item in links" :key="item.name"
@@ -44,23 +45,23 @@
     
                 <button @click="change"
                     type="button"
-                    class="sm:hidden inline-flex items-center justify-center rounded-md p-2 h-1/2 w-10 font-bold text-green-100 bg-gray-900">
+                    class="z-50 sm:hidden inline-flex items-center justify-center rounded-md p-2 h-1/2 w-10 font-bold text-green-100 bg-gray-900">
                     <font-awesome-icon
                     :class=" open ? 'w-0 rotate-180' : 'w-1/2 duration-200' "
                         icon="fa-solid fa-bars-staggered" />
                     <font-awesome-icon
-                        :class=" open ? 'w-1/2 duration-200 rotate-90' : 'w-0' "
+                        :class=" open ? 'w-1/2 duration-200 rotate-90 fixed' : 'w-0' "
                         icon="fa-solid fa-xmark" />
                 </button>
             </div>
         </nav>
-        <div :class="[open ? 'w-full border-r rounded-tr-xl' : 'w-0']"
-            class="h-screen top-0 z-50 bg-[#131B22]/20 border-r-[#131B22] duration-300 fixed backdrop-blur-md">
-            <!-- <button type="button"
-                class="w-full text-right pr-3 pt-5"
+        <div :class="[open ? 'w-full border-r rounded-tr-xl z-0' : 'w-0']"
+            class="min-h-screen top-0 z-50 bg-[#131B22]/20 border-r-[#131B22] duration-300 fixed backdrop-blur-md pt-20">
+            <!-- <button v-if="open"
+                type="button"
+                class="border px-3 text-right w-full"
                 @click="change">
                 <font-awesome-icon
-                        :class=" open ? 'duration-200 rotate-90 text-white/70 text-3xl' : 'w-0' "
                         icon="fa-solid fa-xmark" />
             </button> -->
             <!-- <div class="mt-7"> -->
