@@ -99,14 +99,33 @@ export const proyects = [
         name: 'Quizz App',
         dev: 'https://app-quiz-amse.vercel.app',
         github: 'https://github.com/AlexSilvaEneque/app-quiz',
-        desc: 'Aplicación Quiz desarrollado con VueJs Composition API',
+        desc: 'Aplicación de preguntas de diversos temas que pondrán a prueba tus conocimientos',
+        techs: [
+            {
+                name: 'Vuejs'
+            },
+            {
+                name: 'JavaScript'
+            },
+        ],
         photo: '/img/quizzapp.png'
     },
     {
         name: 'Weather App',
         dev: 'https://weather-app-amsedev.vercel.app',
         github: 'https://github.com/AlexSilvaEneque/weather-app',
-        desc: 'Aplicación del tiempo elaborada con Vuejs (Composition API) y Vuetify',
+        desc: 'Aplicación donde podrás ver el pronóstico del tiempo del día y de los posteriores días',
+        techs: [
+            {
+                name: 'Vuejs'
+            },
+            {
+                name: 'Vuetify'
+            },
+            {
+                name: 'JavaScript'
+            },
+        ],
         photo: '/img/weatherapp.png'
     },
 ]

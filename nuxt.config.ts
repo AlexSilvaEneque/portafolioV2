@@ -11,7 +11,7 @@ export default defineNuxtConfig({
             viewport: 'width=device-width, initial-scale=1',
             title: 'AMSE Dev',
             htmlAttrs: {
-                lang: 'es'
+                lang: 'en'
             },
             meta: [
                 {

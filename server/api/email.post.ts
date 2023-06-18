@@ -5,8 +5,16 @@ interface ICResponse {
     status: Boolean
 }
 
+interface IBody {
+    name: string
+    asunto: string
+    email: string
+    msj: string
+}
+
 export default defineEventHandler( async (event) => {
-    const body = await readBody(event)
+
+    const body : IBody= await readBody(event)
     
     let res : ICResponse = {
         msj: '',
@@ -25,7 +33,8 @@ export default defineEventHandler( async (event) => {
 
     let mailOptions = {
         from: body.email,
-        to: runtime.email
+        to: runtime.email,
+        subject: body.asunto
     }
 
     try {
@@ -34,15 +43,15 @@ export default defineEventHandler( async (event) => {
             text: body.msj,
             html: `<h3>Quiere Contactarte: </h3>
                 <p>${body.name} - ${body.email}</p>
-                <h3>Asunto:</h3>
+                <h3>Mensaje:</h3>
                 <p>${body.msj}</p>
                 `
         })
 
-        res.msj = 'Envio exitoso!'
+        res.msj = 'Mensaje enviado, pronto me pondré en contacto con usted(es)!'
         
     } catch (error) {
-        res.msj = 'Hubo un error'
+        res.msj = 'Ocurrió un error'
         res.status = false
     }
 

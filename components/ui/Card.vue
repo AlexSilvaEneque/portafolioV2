@@ -15,7 +15,7 @@
 <template>
     <div class="mt-7">
         <h3 class="mb-4 text-white text-center md:text-left">{{ props.title }}</h3>
-        <div class="w-full flex flex-wrap justify-center lg:justify-start gap-4">
+        <div class="w-full flex flex-wrap justify-center lg:justify-start gap-3">
             <div v-for="item in props.skill"
                 class="w-28 md:w-32 shadow-sm bg-[#131B22]/70 rounded-md py-2">
                 <img :src="<string>item.image" :alt="<string>item.name"

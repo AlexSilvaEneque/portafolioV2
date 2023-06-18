@@ -3,11 +3,11 @@
 </script>
 
 <template>
-    <div id="proyects" class="z-0 w-full min-h-screen bg-gradient-to-bl from-[#0C0C0D] to-[#131B22]">
-        <div class="w-3/4 mx-auto py-9">
-            <h2 class="text-white text-2xl text-center md:text-left font-semibold">Proyectos</h2>
+    <div id="proyects" class="z-0 w-full bg-gradient-to-bl from-[#0C0C0D] to-[#131B22]">
+        <div class="w-11/12 md:max-w-4xl mx-auto py-9">
+            <h2 class="text-white text-2xl text-center md:text-left font-semibold mt-5">Proyectos</h2>
 
-            <div class="w-full mt-5 flex flex-wrap gap-6 justify-center">
+            <div class="w-full my-10 flex flex-wrap gap-8 justify-center px-5">
                 <div v-for="proyect in proyects"
                     class="w-[300px] shadow-sm shadow-white/40 rounded-lg flex items-center flex-col">
                     <img class="w-full aspect-[3/3] object-cover rounded-t"
@@ -15,14 +15,20 @@
                     <div class="text-white text-center mb-3">
                         <p class="font-semibold text-sm md:text-lg my-3">{{ proyect.name }}</p>
                         <p class="text-xs md:text-sm px-3">{{ proyect.desc }}</p>
-                        <div class="w-full flex justify-around mt-3">
-                            <a :href="proyect.github" target="_blank" class="w-24 py-2 rounded-md text-white/80 bg-[#131B22]/70 text-center text-xs md:text-sm
-                                hover:cursor-pointer hover:bg-[#131B22]/90">
-                                Github
+                        <div class="flex justify-center px-6 gap-3 mt-3">
+                            <span v-for="item in proyect.techs"
+                                class="px-2 py-1 text-sm rounded-xl bg-[#4B5563]/80">
+                                {{ item.name }}
+                            </span>
+                        </div>
+                        <div class="w-full flex justify-end px-5 mt-3 gap-3">
+                            <a :href="proyect.github" target="_blank" class="rounded-md text-white text-center text-xl
+                                hover:cursor-pointer hover:text-white/90">
+                                <font-awesome-icon icon="fa-brands fa-github-alt" />
                             </a>
-                            <a :href="proyect.dev" target="_blank" class="w-24 py-2 rounded-md text-white/80 bg-[#131B22]/70 text-center text-xs md:text-sm
-                                hover:cursor-pointer hover:bg-[#131B22]/90">
-                                Live Demo
+                            <a :href="proyect.dev" target="_blank" class="rounded-md text-white text-center text-xl
+                                hover:cursor-pointer hover:text-white/90">
+                                <font-awesome-icon icon="fa-solid fa-link" />
                             </a>
                         </div>
                     </div>
