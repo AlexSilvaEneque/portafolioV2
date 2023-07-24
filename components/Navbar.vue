@@ -33,7 +33,7 @@
             <div class="flex h-full items-center w-11/12 md:max-w-4xl mx-auto justify-between font-bold">
                 <div class="flex justify-start">
                     <a href="#">
-                        <img src="~/assets/img/logo.png" class="w-full h-32" alt="Logo"
+                        <img src="~/assets/img/AMSE.png" class="w-full h-12" alt="Logo"
                             loading="lazy">
                     </a>
                 </div>
