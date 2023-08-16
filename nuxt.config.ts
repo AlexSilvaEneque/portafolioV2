@@ -35,5 +35,9 @@ export default defineNuxtConfig({
             autoprefixer: {}
         }
     },
+    modules: ['@nuxtjs/color-mode'],
+    colorMode: {
+        classSuffix: ''
+    }
 
 })

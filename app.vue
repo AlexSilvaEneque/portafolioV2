@@ -3,13 +3,16 @@
 </script>
 
 <template>
-  <main class="bg-[#0C0C0D]">
+  <main class="h-screen">
       <Navbar />
       <LazyAbout />
       <LazySkills />
       <LazyProyects />
-      <Contact />
+      <LazyContact />
       <LazyFooter />
+      <div class="flex">
+        <UiButtonTopAndMode />
+      </div>
   </main>
 </template>
 
@@ -25,7 +28,7 @@ body::-webkit-scrollbar {
   background-image: linear-gradient(#131B22, #0C0C0D);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #35E4D9;
+  background-color: #1FE0B5;
 }
 .custom-height {
     min-height: calc(100vh - 80px);

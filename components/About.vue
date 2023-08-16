@@ -7,9 +7,9 @@
 </script>
 
 <template>
-    <div id="about" class="w-full flex items-center border-transparent custom-height bg-gradient-to-bl from-[#0C0C0D] to-[#131B22] py-10">
+    <div id="about" class="w-full flex items-center border-transparent custom-height bg-gradient-to-bl from-white to-white/90 dark:from-[#0C0C0D] dark:to-[#131B22] py-10">
         <div class="w-11/12 md:max-w-4xl mx-auto px-3">
-            <div class="flex flex-col justify-end text-white font-bold">
+            <div class="flex flex-col justify-end text-gray-800 dark:text-white font-bold">
                 
                 <h1 class="mb-6 text text-2xl sm:text-4xl lg:text-7xl text-center">Hola!, soy <span class="text-transparent bg-clip-text bg-gradient-to-l from-[#01DC84] to-[#35E4D9]">Alex Silva</span></h1>
                 <Typewriter

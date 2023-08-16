@@ -6,6 +6,7 @@ module.exports = {
     './pages/**/*.vue',
     './app.vue'
   ],
+  darkMode: 'class',
   theme: {
     extend: {
     },
