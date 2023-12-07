@@ -7,9 +7,8 @@ interface ICResponse {
 
 interface IBody {
     name: string
-    asunto: string
     email: string
-    msj: string
+    message: string
 }
 
 export default defineEventHandler( async (event) => {
@@ -34,17 +33,17 @@ export default defineEventHandler( async (event) => {
     let mailOptions = {
         from: body.email,
         to: runtime.email,
-        subject: body.asunto
+        subject: 'Conectando desde amsedev.com'
     }
 
     try {
         await transporter.sendMail({
             ...mailOptions,
-            text: body.msj,
+            text: 'Conectando desde amsedev.com',
             html: `<h3>Quiere Contactarte: </h3>
                 <p>${body.name} - ${body.email}</p>
                 <h3>Mensaje:</h3>
-                <p>${body.msj}</p>
+                <p>${body.message}</p>
                 `
         })
 

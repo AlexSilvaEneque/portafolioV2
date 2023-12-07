@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+    devtools: { enable: false },
     
     runtimeConfig: {
         email: process.env.EMAIL,
@@ -28,16 +29,17 @@ export default defineNuxtConfig({
             ]
         }
     },
-    css: ['~/assets/css/main.css'],
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {}
-        }
-    },
-    modules: ['@nuxtjs/color-mode'],
-    colorMode: {
-        classSuffix: ''
-    }
 
+    modules: [
+        '@nuxt/ui',
+    ],
+    css: [
+        "primevue/resources/themes/lara-light-blue/theme.css",
+    ],
+
+    build: {
+        transpile: [
+            "primevue"
+        ]
+    }
 })
