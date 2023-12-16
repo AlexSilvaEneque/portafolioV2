@@ -76,7 +76,7 @@
 <template>
     <nav id="nav" class="w-full h-16 fixed lg:sticky lg:top-0 bottom-0 flex items-center justify-between px-3 backdrop-blur-[5px] z-20">
         <ClientOnly>
-            <img src="~/assets/img/logo_amse.png" alt="logo"
+            <img src="/logo-amse.webp" alt="logo"
                 class="w-12 h-10 lg:w-16 lg:h-12"
             />
 

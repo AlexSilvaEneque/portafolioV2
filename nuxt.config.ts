@@ -23,8 +23,8 @@ export default defineNuxtConfig({
             link: [
                 {
                     rel: 'icon',
-                    type: 'image/png',
-                    href: '/AMSE.png'
+                    type: 'image/webp',
+                    href: '/logo-amse.webp'
                 }
             ]
         }

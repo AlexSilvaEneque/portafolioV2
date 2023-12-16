@@ -3,7 +3,7 @@
         {
             title: 'Quizz App',
             description: 'Aplicación de preguntas de diversos temas que pondrán a prueba tus conocimientos.',
-            img: 'quizzapp.png',
+            img: 'quizzapp.webp',
             techs: [
                 { name: 'Vue' },
                 { name: 'JavaScript' },
@@ -13,7 +13,7 @@
         {
             title: 'Weather App',
             description: 'Aplicación donde podrás ver el pronóstico del tiempo del día y de los posteriores.',
-            img: 'weatherapp.png',
+            img: 'weatherapp.webp',
             techs: [
                 { name: 'Vue' },
                 { name: 'Vuetify' },
