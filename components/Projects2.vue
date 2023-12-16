@@ -8,6 +8,7 @@
                 { name: 'Vue' },
                 { name: 'JavaScript' },
             ],
+            repo: 'https://github.com/AlexSilvaEneque/app-quiz',
             deploy: 'https://app-quiz-amse.vercel.app'
         },
         {
@@ -19,7 +20,26 @@
                 { name: 'Vuetify' },
                 { name: 'JavaScript' },
             ],
+            repo: 'https://github.com/AlexSilvaEneque/weather-app',
             deploy: 'https://weather-app-amsedev.vercel.app'
+        },
+        {
+            title: 'Sistema de control de inventario',
+            description: 'Sistema de control de inventario desarrollado para una empresa que dedicada a la fabricación de muebles',
+            img: 'rojas.webp',
+            techs: [
+                { name: 'Vue' },
+                { name: 'TypeScript' },
+                { name: 'NuxtUI' },
+                { name: 'PrimeVue' },
+                { name: 'Pinia' },
+                { name: 'MongoDB' },
+                { name: 'Node.js' },
+                { name: 'Express.js' },
+                { name: 'Prisma' },
+            ],
+            repo: 'https://github.com/AlexSilvaEneque/rojas-eirl',
+            deploy: ''
         },
     ]
 </script>
@@ -50,9 +70,15 @@
                         
                         <div class="mt-5 flex align-items-center justify-content-center gap-2">
                             <UButton label="Demo"
+                                v-if="slotProps.data.deploy"
                                 :to="slotProps.data.deploy"
                                 target="_blank"
                                 icon="i-heroicons-arrow-top-right-on-square"
+                            />
+                            <UButton label="GitHub"
+                                :to="slotProps.data.repo"
+                                target="_blank"
+                                icon="i-heroicons-link"
                             />
                         </div>
                     </div>
