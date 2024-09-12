@@ -1,6 +1,5 @@
 <script setup lang="ts">
     const links = [
-        'https://www.instagram.com/silvaenequealex/',
         'https://www.linkedin.com/in/alexse/',
         'https://github.com/AlexSilvaEneque',
     ]
@@ -30,9 +29,8 @@
         <!-- about contact -->
         <div class="text-gray-700 dark:text-slate-300">
             <div class="flex justify-center items-center">
-                <IconsInstagram @click="gotToSocial(0)" />
-                <IconsLinkedin @click="gotToSocial(1)" />
-                <IconsGithub @click="gotToSocial(2)" />
+                <IconsLinkedin @click="gotToSocial(0)" />
+                <IconsGithub @click="gotToSocial(1)" />
             </div>
             
             <a href="/docs/cv_Alex_Silva.pdf"
